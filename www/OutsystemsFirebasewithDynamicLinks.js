@@ -6,15 +6,15 @@ module.exports = {
     },
 
     createDynamicLink: function(params) {
-        cordova.plugins.firebase.dynamiclinks.createDynamicLink(params);
+        return cordova.plugins.firebase.dynamiclinks.createDynamicLink(params);
     },
     
     createShortDynamicLink: function(params) {
-        cordova.plugins.firebase.dynamiclinks.createShortDynamicLink(params);
+        return cordova.plugins.firebase.dynamiclinks.createShortDynamicLink(params);
     },
 
     createUnguessableDynamicLink: function(params) {
-        cordova.plugins.firebase.dynamiclinks.createUnguessableDynamicLink(params);
+        return cordova.plugins.firebase.dynamiclinks.createUnguessableDynamicLink(params);
     },
 
     getVerificationID: function(number, success, error) {
