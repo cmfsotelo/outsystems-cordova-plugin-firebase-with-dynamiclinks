@@ -12,7 +12,7 @@
    
     <keywords>cordova,device</keywords>
    
-    <dependency id="cordova-plugin-firebase" url="https://github.com/BrunoJAzevedo/cordova-plugin-firebase.git#no-google-services" >
+    <dependency id="cordova-plugin-firebase" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase.git#no-google-services" >
         <params name="APP_DOMAIN" value="$APP_DOMAIN" />
         <params name="PAGE_LINK_DOMAIN" value="$PAGE_LINK_DOMAIN" />
     </dependency>
@@ -20,7 +20,7 @@
     <preference name="APP_DOMAIN" />
     <preference name="PAGE_LINK_DOMAIN" />
 
-    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/BrunoJAzevedo/cordova-plugin-firebase-dynamiclinks#outsystems-firebase-mobile-compatibility" />
+    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase-dynamiclinks#outsystems-firebase-mobile-compatibility" />
 
     <engines>
         <engine name="cordova" version=">=7.1.0" />
