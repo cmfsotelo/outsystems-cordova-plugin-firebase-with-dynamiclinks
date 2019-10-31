@@ -151,5 +151,9 @@ module.exports = {
 
     forceCrashlytics: function (success, error) {
         FirebasePlugin.forceCrashlytics(success, error);
+    },
+
+    addTraceAttribute: function (traceName, attribute, value, success, error) {
+        FirebasePlugin.addTraceAttribute(traceName, attribute, value, success, error);
     }
 };
