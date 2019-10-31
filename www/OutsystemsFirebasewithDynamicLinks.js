@@ -147,9 +147,9 @@ module.exports = {
 
     startTrace: function (name, success, error) {
         FirebasePlugin.startTrace(name, success, error);
-    }
+    },
 
     forceCrashlytics: function (success, error) {
         FirebasePlugin.forceCrashlytics(success, error);
-    },
+    }
 };
