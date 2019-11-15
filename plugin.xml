@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="outsystems-cordova-plugin-firebase-with-dynamiclinks" 
-    version="0.1.0" 
+    version="1.0.0" 
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -12,7 +12,7 @@
    
     <keywords>cordova,device</keywords>
    
-    <dependency id="cordova-plugin-firebase" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase.git#no-google-services" >
+    <dependency id="cordova-plugin-firebase" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase.git#v1.0.0-os" >
         <params name="APP_DOMAIN" value="$APP_DOMAIN" />
         <params name="PAGE_LINK_DOMAIN" value="$PAGE_LINK_DOMAIN" />
     </dependency>
@@ -20,7 +20,7 @@
     <preference name="APP_DOMAIN" />
     <preference name="PAGE_LINK_DOMAIN" />
 
-    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase-dynamiclinks#outsystems-firebase-mobile-compatibility" />
+    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase-dynamiclinks#v1.0.0-os" />
 
     <engines>
         <engine name="cordova" version=">=7.1.0" />
