@@ -20,7 +20,7 @@
     <preference name="APP_DOMAIN" />
     <preference name="PAGE_LINK_DOMAIN" />
 
-    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase-dynamiclinks#debug-ios-notification" />
+    <dependency id="cordova-plugin-firebase-dynamiclinks" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase-dynamiclinks#v1.0.0-os" />
 
     <engines>
         <engine name="cordova" version=">=7.1.0" />
