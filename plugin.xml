@@ -12,7 +12,7 @@
    
     <keywords>cordova,device</keywords>
    
-    <dependency id="cordova-plugin-firebase" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase.git#android-notifications-actions" >
+    <dependency id="cordova-plugin-firebase" url="https://github.com/OutSystemsExperts/cordova-plugin-firebase.git#notifications-actions" >
         <params name="APP_DOMAIN" value="$APP_DOMAIN" />
         <params name="PAGE_LINK_DOMAIN" value="$PAGE_LINK_DOMAIN" />
     </dependency>
