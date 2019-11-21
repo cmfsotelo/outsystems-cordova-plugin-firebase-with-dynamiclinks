@@ -155,5 +155,9 @@ module.exports = {
 
     addTraceAttribute: function (traceName, attribute, value, success, error) {
         FirebasePlugin.addTraceAttribute(traceName, attribute, value, success, error);
+    },
+
+    init: function (options) {
+        FirebasePlugin.init(options);
     }
 };
