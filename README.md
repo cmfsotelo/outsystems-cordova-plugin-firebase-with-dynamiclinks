@@ -31,6 +31,7 @@ Firebase.getToken(function(token) {
   - [Plugin Explanation](#plugin-explanation)
   - [Supported Platforms](#supported-platforms)
   - [Installation](#installation)
+  - [Notification Action Buttons](#notification-action-buttons)
 
 <!-- /MarkdownTOC -->
 
@@ -52,3 +53,95 @@ Use variable `PAGE_LINK_DOMAIN` specify your `*.page.link` domain.
 
 Use variable `FIREBASE_DYNAMIC_LINKS_VERSION` and `FIREBASE_CORE_VERSION` to override dependency version on Android.
 
+## Notification Action Buttons
+This plugin version allows you to send action buttons on you notification on both Android and iOS. 
+
+To do so you have to perfom a little change on JSON sent from FCM. This JSON has to be different on Android and iOS.
+
+**NOTE:** In Android you have access to inline reply, in iOS you don't have access to it in this version.
+
+
+### Android notification JSON
+
+```
+{
+  "registration_ids": ["device id"],
+  "data": {
+    "title": "AUX Scrum",
+    "text": "Scrum: Daily touchbase @ 10am Please be on time so we can cover everything on the agenda.",
+    "actions": [
+      {
+        "icon": "emailGuests",
+        "title": "EMAIL GUESTS",
+        "callback": "emailGuests",
+      },
+      {
+        "icon": "snooze",
+        "title": "SNOOZE",
+        "callback": "snooze"
+      }
+    ]
+  }
+}
+```
+**NOTE:** Do not add `notification: { title: "", body: "" }` on your notification JSON or the action buttons will not appear on notification.
+
+### iOS notification JSON
+
+```
+"notification": {
+        "title": "Notification Title",
+        "body": "Notification message",
+		"click_action": "invite"
+}
+```
+
+### How to deal with clicked Actions
+
+When the user clicks on an action in the `Firebase.onNotificationOpen()` you will receive an access to a JSON where there will be an `actionCallback` key where the value is the action callback/click_action that you specified on your JSON. On Android there will be an extra key named `inlineReply` with the user reply to that notification. 
+
+### IMPORTANT FOR IOS
+On iOS, at the starting of the app, you have to pass an JSON with the possible action buttons on the notifications. To do so you have to use the method: `Firebase.init(JSON)`
+
+**JSON example:** 
+```
+{
+    "ios": {
+        categories: {
+      invite: {
+        yes: {
+          callback: 'accept',
+          title: 'Accept',
+          foreground: true,
+          destructive: false
+        },
+        no: {
+          callback: 'reject',
+          title: 'Reject',
+          foreground: true,
+          destructive: false
+        },
+        maybe: {
+          callback: 'maybe',
+          title: 'Maybe',
+          foreground: true,
+          destructive: false
+        }
+      },
+      delete: {
+        yes: {
+          callback: 'doDelete',
+          title: 'Delete',
+          foreground: true,
+          destructive: true
+        },
+        no: {
+          callback: 'cancel',
+          title: 'Cancel',
+          foreground: true,
+          destructive: false
+        }
+      }
+    }
+}
+```
